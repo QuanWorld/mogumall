@@ -1,32 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- 容器 -->
+    <keep-alive><router-view></router-view></keep-alive>
+    <!-- tabbar -->
+    <tab-bar>
+      <tab-bar-item>
+        <img slot="icon" src="~assets/img/tabbar/home.svg" />
+        <span slot="text">首页</span>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="icon" src="~assets/img/tabbar/home.svg" />
+        <span slot="text">首页</span>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="icon" src="~assets/img/tabbar/home.svg" />
+        <span slot="text">首页</span>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="icon" src="~assets/img/tabbar/home.svg" />
+        <span slot="text">首页</span>
+      </tab-bar-item>
+    </tab-bar>
   </div>
 </template>
 
+<script>
+import TabBar from "components/common/tabbar/TabBar.vue"
+import TabBarItem from "components/common/tabbar/TabBarItem.vue"
+
+export default {
+  name: "App",
+  components: {
+    TabBar,
+    TabBarItem,
+  },
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+@import "assets/css/base.css";
 </style>
