@@ -52,7 +52,7 @@ export default {
     },
     getHomeData(type, page) {
       getHomeData(type, page).then((res) => {
-        console.log(res.data);
+        console.log(res);
       });
     },
   },
